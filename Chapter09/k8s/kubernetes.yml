@@ -24,7 +24,7 @@ metadata:
     app.kubernetes.io/version: 0.0.1-SNAPSHOT
   name: scanner
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: scanner
