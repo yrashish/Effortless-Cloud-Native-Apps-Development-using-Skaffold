@@ -1,13 +1,12 @@
-apiVersion: skaffold/v2beta16
+apiVersion: skaffold/v2beta19
 kind: Config
 metadata:
   name: scanner
 build:
   artifacts:
-    - image: breathe
-      jib:
-        project: com.air.quality:scanner
+  - image: breathe
+    jib: { }
 deploy:
   kubectl:
     manifests:
-      - target/classes/META-INF/dekorate/kubernetes.yml
+    - k8s/kubernetes.yml
